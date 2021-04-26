@@ -16,17 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from django.http import HttpResponse
-
-# method index
-def index(request):
-    return HttpResponse('Hello World!')
-
-def about(request):
-    return HttpResponse('Ini method about')
-
+from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index),
-    path('about/', about)
+    path('', views.index),
+    path('about/', views.about)
 ]
