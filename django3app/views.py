@@ -1,11 +1,10 @@
 from django.http import HttpResponse
+from django.shortcuts import render
 
 # method index
 def index(request):
-    judul = '<h1>Hello World!</h1>'
-    subjudul = '<h2> Selamat datang di django3app</h2>'
-    output = judul + subjudul
-    return HttpResponse(output)
+    return render(request, 'index.html')
+
 
 def about(request):
-    return HttpResponse('<h1>Ini method about</h1>')
+    return render(request, 'about.html')
