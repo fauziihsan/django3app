@@ -5,9 +5,15 @@ from django.shortcuts import render
 def index(request):
     context = {
         'judul': 'Blog',
-        'kontributor': 'Fauzi Ihsan'
+        'kontributor': 'Fauzi Ihsan',
+        'nav': [
+            ['/','Home'],
+            ['/blog','Blog'],
+            ['/about','About'],
+            ['/contact','Contact'],
+        ]
     }
-    return render(request, 'blog/blog.html', context)
+    return render(request, 'index.html', context)
 
 def cerita(request):
     context = {
