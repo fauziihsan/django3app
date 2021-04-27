@@ -4,15 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BLOG | Django3App</title>
+    <title>{{ judul }} | Django3App</title>
 </head>
 <body>
-    <h1>BLOG</h1>
+    <h1>{{ judul }}</h1>
+    <h2>kontributor: {{ kontributor }}</h2>
 
     <ul>
         <li><a href="/">home</a></li>
         <li><a href="/blog">blog</a></li>
+        <ul>
+            <li><a href="/blog/cerita">cerita</a></li>
+            <li><a href="/blog/news">news</a></li>
+        </ul>
         <li><a href="/about">about</a></li>
+
     </ul>
 </body>
 </html>
