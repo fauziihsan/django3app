@@ -5,15 +5,16 @@ from django.shortcuts import render
 def index(request):
     context = {
         'judul': 'Blog',
-        'kontributor': 'Fauzi Ihsan',
+        'kontributor': 'Parent dari Blog',
         'nav': [
             ['/','Home'],
             ['/blog','Blog'],
             ['/about','About'],
             ['/contact','Contact'],
-        ]
+        ],
+        'banner': 'blog/img/banner_blog.png'
     }
-    return render(request, 'index.html', context)
+    return render(request, 'blog/blog.html', context)
 
 def cerita(request):
     context = {

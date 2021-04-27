@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,17 +8,14 @@
     <title>{{ judul }} | Django3App</title>
 </head>
 <body>
+    <img style="width: 100%;" src="{% static banner %}" alt="">
     <h1>{{ judul }}</h1>
-    <h2>kontributor: {{ kontributor }}</h2>
+    <h2>Kontributor: {{ kontributor }}</h2>
 
     <ul>
-        <li><a href="/">home</a></li>
-        <li><a href="/blog">blog</a></li>
-        <ul>
-            <li><a href="/blog/cerita">cerita</a></li>
-            <li><a href="/blog/news">news</a></li>
-        </ul>
-        <li><a href="/about">about</a></li>
+        {% for link, name in nav %}
+        <li><a href="{{ link }}">{{ name }}</a></li>
+        {% endfor %}
 
     </ul>
 </body>
