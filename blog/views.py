@@ -12,9 +12,10 @@ def index(request):
             ['/about','About'],
             ['/contact','Contact'],
         ],
-        'banner': 'blog/img/banner_blog.png'
+        'banner': 'blog/img/banner_blog.png',
+        'app_css': 'blog/css/styles.css'
     }
-    return render(request, 'blog/blog.html', context)
+    return render(request, 'index.html', context)
 
 def cerita(request):
     context = {
