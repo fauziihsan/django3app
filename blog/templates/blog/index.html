@@ -1,0 +1,40 @@
+{% extends "layout/layout.html" %}
+
+{% block content %}
+
+    <div class="container">
+        <h1>{{ judul }}</h1>
+        <h2>Kontributor : {{ kontributor }}</h2>
+
+        
+        <table class="table table-striped">
+            
+            <thead>
+                
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Judul</th>
+                <th scope="col">Isi</th>
+                <th scope="col">Aksi</th>
+              </tr>
+            </thead>
+            <tbody>
+                {% for post in posts %}
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>{{ post.title}}</td>
+                        <td>{{ post.body }}</td>
+                        <td>
+                            <a href="" class="btn btn-primary">Detail</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+            
+          </table>
+        
+    </div>
+
+    
+
+{% endblock content %}
